@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#Eureka clients fetches the registry information from the server and caches it locally.
+    fetchRegistry: true
+  instance:
+#to renew its lease to Eureka Server with frequency
+    leaseRenewalIntervalInSeconds: 1
+#customize expire time of instance with
+    leaseExpirationDurationInSeconds: 2
+ 
+#to enable load balancing in Eureka
+ribbon:
+  eureka:
+    enabled: true
